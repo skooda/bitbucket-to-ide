@@ -1,0 +1,30 @@
+.line-number-to {
+  cursor: pointer;
+  color: #059 !important
+}
+
+.line-number-to:hover {
+  text-decoration: underline
+}
+
+.line-number-to:after {
+    content: "Open in IDE";
+    padding: 2px;
+    display:none;
+    position: absolute;
+    top: 22px;
+    right: -120px;
+    width: 90px;
+    text-align: center;
+    background-color: #fef4c5;
+    border: 1px solid #d4b943;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    z-index: 999;
+}
+
+.line-number-to:hover:after {
+    display: block;
+}
