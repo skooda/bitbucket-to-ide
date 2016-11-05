@@ -8,6 +8,12 @@ Will be available in chrome extension store soon ..
 
 ## Configuration
 
+For now configuration is needed for each repository in BitBucket separately.
+
+### Project root
+
+**BitBucket to IDE** is not omniscient, so you must provide path to your code for each repository. Its simple, just remember please to use absolute (global) path instead of relative.
+
 ### Editor protocol
 
 **BitBucket to IDE** uses chrome **custom protocol handler** to open your ide.

@@ -1,0 +1,17 @@
+body {
+    min-width: 300px;
+}
+
+label {
+  display: block;
+}
+
+input[type=text] {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.right {
+  position: absolute;
+  right:  1.6em;
+}

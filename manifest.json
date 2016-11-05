@@ -9,7 +9,7 @@
   "browser_action": {
     "default_title": "BitBucket to IDE",
     "default_icon": "icon_19.png",
-    "default_popup": "popup.html"
+    "default_popup": "options.html"
   },
 
   "content_scripts": [
@@ -23,6 +23,8 @@
 
   "permissions": [
     "http://stash.srv.czech/*",
-    "https://stash.srv.czech/*"
+    "https://stash.srv.czech/*",
+    "storage",
+    "tabs"
   ]
 }

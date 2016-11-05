@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BitBucket to IDE extension configuration</title>
+    <link rel="stylesheet" type="text/css" href="options.css">
+    <script src="shared.js"></script>
+  </head>
+  <body>
+    <h1>Setup for <span id="projectName">project</span></h1>
+
+    <label for="editorUrl">
+      Editor protocol url:
+      <a target="_blank" class="right" href="https://github.com/skooda/bitbucket-to-ide#editor-protocol">[what is it?]</a>
+    </label>
+    <input type="text" id="editorUrl">
+
+
+    <label for="projectPath">
+      Project root path:
+      <a target="_blank" class="right" href="https://github.com/skooda/bitbucket-to-ide#project-root">[what is it?]</a>
+    </label>
+    <input type="text" id="projectPath">
+
+    <div id="status"></div>
+    <button id="save">Save</button>
+
+    <script src="options.js"></script>
+  </body>
+</html>
