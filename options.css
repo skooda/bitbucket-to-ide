@@ -4,6 +4,11 @@ body {
 
 label {
   display: block;
+  font-size: 1.2em;
+}
+
+label a {
+  font-size: 0.825em;
 }
 
 input[type=text] {
@@ -16,6 +21,11 @@ button {
   background: #ffffff;
   border-radius: 3px;
   border: 1px solid #cccccc;
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 1.325em;
 }
 
 .right {
@@ -39,6 +49,7 @@ button {
   display: block;
   float: left;
   width: calc(25% - 1px);
+  font-size: 0.8em;
 }
 
 .multi button.active {

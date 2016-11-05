@@ -38,6 +38,11 @@ function get_project_name(url) {
       project += "/" + path[i];
     }
   }
+
+  if (project.split('/').length < 3) {
+    return false;
+  }
+
   return project;
 }
 
@@ -47,7 +52,7 @@ function restore_options() {
 
   for (el of document.getElementsByClassName("protocol-button")) {
     let protocol = el.dataset.protocol;
-    console.log(protocol);
+
     el.addEventListener("click", () => {
       document.getElementById('editorUrl').value = protocol;
     });
@@ -56,6 +61,11 @@ function restore_options() {
   chrome.tabs.getSelected(null, (tab) => {
 
     let projectName = get_project_name(tab.url);
+
+    if (! projectName) {
+      document.getElementsByTagName("body")[0].innerHTML = "<p>This extension works only at stash in repository view.</p>";
+    }
+
     let config = {};
 
     config[projectName] = {
