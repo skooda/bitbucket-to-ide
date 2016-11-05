@@ -1,20 +1,23 @@
 {
   "manifest_version": 2,
 
-  "name": "BitBucket to IDE",
-  "description": "Add link to open reviewed file in your IDE",
+  "name": "Stash to IDE",
+  "description": "Add link to open reviewed file in your favorite IDE",
   "version": "0.1",
   "icons": { "128": "icon_128.png" },
 
   "browser_action": {
-    "default_title": "BitBucket to IDE",
+    "default_title": "Stash to IDE",
     "default_icon": "icon_19.png",
     "default_popup": "options.html"
   },
 
   "content_scripts": [
     {
-      "matches": ["https://stash.srv.czech/*", "http://stash.srv.czech/*"],
+      "matches": [
+        "https://stash.srv.czech/*",
+        "http://stash.srv.czech/*"
+      ],
       "js": ["content.js"],
       "css": ["content.css"],
       "run_at": "document_end"

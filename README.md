@@ -1,10 +1,13 @@
-# BitBucket to editor
+# Stash to IDE
 
-This google-chrome extension simple adds shortcut to open reviewed file from Attlasian BitBucket (Stash) into your favorite IDE.
+This google-chrome extension allows you to open reviewed file from Attlasian Stash in your favorite IDE by simple click on line number.
 
 ## Install
 
-Will be available in chrome extension store soon ..
+- Clone this project
+- Edit `content_scripts > matches` and `permissions` sections in *manifest.json* to match your STASH copy url
+- Open chrome://extensions/ page
+- Click to `Load unpacket extension` and find directory with this project
 
 ## Configuration
 
@@ -12,11 +15,11 @@ For now configuration is needed for each repository in BitBucket separately.
 
 ### Project root
 
-**BitBucket to IDE** is not omniscient, so you must provide path to your code for each repository. Its simple, just remember please to use absolute (global) path instead of relative.
+**Stash to IDE** is not omniscient, so you must provide path to your code for each repository. Its simple, just remember please to use absolute (global) path instead of relative.
 
 ### Editor protocol
 
-**BitBucket to IDE** uses chrome **custom protocol handler** to open your ide.
+**Stash to IDE** uses chrome **custom protocol handler** to open your ide.
 In practice that means that the extension opens special url like `editon://open?file=test.js&line=21`
 and the rest of work belongs to browser.
 
