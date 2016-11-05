@@ -11,7 +11,48 @@ input[type=text] {
   margin: 10px 0;
 }
 
+button {
+  padding: 7px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+}
+
 .right {
   position: absolute;
   right:  1.6em;
+}
+
+.multi {
+  margin: 10px 0 5px 0;
+}
+
+.multi button {
+  outline: none;
+  background: #ffffff;
+  border: none;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px solid #eeeeee;
+  margin: 0;
+  padding: 5px 0;
+  display: block;
+  float: left;
+  width: calc(25% - 1px);
+}
+
+.multi button.active {
+  background: #0077cc;
+  color: #ffffff;
+}
+
+.multi button.first {
+  border-left: 1px solid #cccccc;
+  border-radius: 3px 0 0 3px;
+}
+
+.multi button.last {
+  border-right: 1px solid #cccccc;
+  border-radius: 0 3px 3px 0;
+  width: calc(25% - 2px);
 }

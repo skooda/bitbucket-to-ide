@@ -22,7 +22,6 @@ function save_options() {
       editorUrl: editorUrl,
       projectPath: projectPath
     };
-
     chrome.storage.sync.set(config, notify('Settings saved.'));
   });
 }
@@ -45,6 +44,15 @@ function get_project_name(url) {
 // Restores configuration state using the preferences
 // stored in chrome.storage.
 function restore_options() {
+
+  for (el of document.getElementsByClassName("protocol-button")) {
+    let protocol = el.dataset.protocol;
+    console.log(protocol);
+    el.addEventListener("click", () => {
+      document.getElementById('editorUrl').value = protocol;
+    });
+  }
+
   chrome.tabs.getSelected(null, (tab) => {
 
     let projectName = get_project_name(tab.url);

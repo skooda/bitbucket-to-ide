@@ -8,11 +8,16 @@
     <h1>Setup for <span id="projectName">project</span></h1>
 
     <label for="editorUrl">
-      Editor protocol url:
+      Editor protocol:
       <a target="_blank" class="right" href="https://github.com/skooda/bitbucket-to-ide#editor-protocol">[what is it?]</a>
     </label>
+    <div class="multi">
+      <button data-protocol="idea://open?file=%file%&line=%line%" class="protocol-button first">Idea</button>
+      <button data-protocol="phpstorm://open?file=%file%&line=%line%" class="protocol-button">PHP Storm</button>
+      <button data-protocol="pycharm://open?file=%file%&line=%line%" class="protocol-button">PyCharm</button>
+      <button data-protocol="" class="protocol-button last">Other</button>
+    </div>
     <input type="text" id="editorUrl">
-
 
     <label for="projectPath">
       Project root path:
