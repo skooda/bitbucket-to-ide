@@ -13,6 +13,12 @@ function get_project_name(url) {
   return project;
 }
 
+function setupNotice() {
+  let div = document.createElement('div');
+  div.innerHTML = '<div id="sti---notice"><span style="font-size: 3em; float: right;">&#128070;</span><p><strong>Stash to CLI</strong> is not set for this project! <br />Click on extension icon to configure it.</p></div>';
+  document.getElementsByTagName('body')[0].appendChild(div);
+}
+
 function openIde(fileName, lineNo) {
   if (! lineNo) {
      let lineNo = 0;
@@ -28,6 +34,12 @@ function openIde(fileName, lineNo) {
 
   chrome.storage.sync.get(config, (items) => {
     setup = items[projectName];
+
+    if (! setup.projectPath || ! setup.editorUrl) {
+      setupNotice();
+      return false;
+    }
+
     browserUrl = setup.editorUrl;
     basePath = setup.projectPath + "/";
 
@@ -42,5 +54,11 @@ document.body.addEventListener("click", (event) => {
   if (element) {
     let fileName = element.closest(".file-content").querySelector(".breadcrumbs").innerText;
     openIde(fileName, parseInt(element.innerHTML));
+  }
+
+  let notice = document.getElementById('sti---notice');
+
+  if (notice) {
+    notice.parentNode.removeChild(notice);
   }
 });

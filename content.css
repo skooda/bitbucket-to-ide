@@ -28,3 +28,13 @@
 .line-number-to:hover:after {
     display: block;
 }
+
+#sti---notice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  width: 280px;
+  border: 1px solid red;
+  background: #ff9;
+}
