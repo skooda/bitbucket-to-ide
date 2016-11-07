@@ -1,13 +1,13 @@
-.line-number-to {
+.line-number {
   cursor: pointer;
   color: #059 !important
 }
 
-.line-number-to:hover {
+.line-number:hover {
   text-decoration: underline
 }
 
-.line-number-to:after {
+.line-number:after {
     content: "Open in IDE";
     padding: 2px;
     display:none;
@@ -25,12 +25,12 @@
     z-index: 999;
 }
 
-.line-number-to:hover:after {
+.line-number:hover:after {
     display: block;
 }
 
 #sti---notice {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   padding: 10px;

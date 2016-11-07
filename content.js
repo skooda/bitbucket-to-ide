@@ -49,7 +49,7 @@ function openIde(fileName, lineNo) {
 }
 
 document.body.addEventListener("click", (event) => {
-  let element = event.path[0].closest(".line-number-to");
+  let element = event.path[0].closest(".line-number");
 
   if (element) {
     let fileName = element.closest(".file-content").querySelector(".breadcrumbs").innerText;
